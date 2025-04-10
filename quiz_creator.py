@@ -6,6 +6,14 @@
 # Feel free to use any library
 
 
+# All of the questions, choices, and the correct answer shall be saved to a separate file (.txt)
+     # Define a function save_to_file()
+        # A text file will open in appen mode.
+        # Write the question.
+        # Write each option with its respective label (a, b, c, d).
+        # Write the correct answer.
+        # Format the txt file by adding a space between entries for better readability to the user.
+
 
 # Make a welcome message to the user.
 def main():
@@ -26,14 +34,6 @@ def main():
     # Asking the user to input the correct answer that is found in one of the following letter choices: (a, b, c, d)
         # For consistency, the letter input should be lowercased, we will be converting them.
         correct_answer = input("Enter the correct answer (a, b, c, or d): ").lower()
-
-    # All of the questions, choices, and the correct answer shall be saved to a separate file (.txt)
-        # Define a function save_to_file()
-            # A text file will open in appen mode.
-            # Write the question.
-            # Write each option with its respective label (a, b, c, d).
-            # Write the correct answer.
-            # Format the txt file by adding a space between entries for better readability to the user.
 
     # Make a visual display feedback for the questions entered (for more convenience visually in letting the user know what answer options are correct or not)
         # Make a loop for each answer option
