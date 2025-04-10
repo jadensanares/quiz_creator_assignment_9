@@ -6,7 +6,10 @@
 # Feel free to use any library
 
 
+
 # Make a welcome message to the user.
+def main():
+    print("Hello User, welcome to this Quiz Creator!")
 
 # Create the loop in able for the user to input as many quiz questions that they want.
     # Asking the user to input a quiz question and then store it.
