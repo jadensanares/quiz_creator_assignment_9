@@ -13,7 +13,12 @@
         # Write each option with its respective label (a, b, c, d).
         # Write the correct answer.
         # Format the txt file by adding a space between entries for better readability to the user.
-
+def save_to_file(question, choices, correct_answer, filename="created_quiz_questions.txt"):
+    with open(filename, "a") as file:
+        file.write(question + "\n")
+        for choice, answer in choices.items():
+            file.write(choice + ": " + answer + "\n")
+        file.write("Correct Answer: " + correct_answer + "\n\n")
 
 # Make a welcome message to the user.
 def main():
