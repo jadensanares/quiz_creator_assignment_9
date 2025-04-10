@@ -44,6 +44,12 @@ def main():
         # Make a loop for each answer option
         # If the option is the correct answer, print it with a green square emoji text (🟩).
         # If the option is not the correct answer, print it with a red square emoji text (🟥).
+        print("Question feedback:")
+        for choice, answer in choices.items():
+            if choice == correct_answer:
+                print(choice + ": " + answer + " 🟩")
+            else:
+                print(choice + ": " + answer + " 🟥")
 
     # Ask the user if they want to put in another question.
         # If the response is "yes" then the loop continues, if "no" then the loop breaks
