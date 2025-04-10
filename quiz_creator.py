@@ -56,5 +56,9 @@ def main():
         another_question = input("Would you like to add another question? Type either (yes) or (no): ").lower()
         if another_question != "yes":
             break
-        
+
 # If the user wants to exit the program, put in a thank message to the user 
+    print("\nThank you for making the quiz! ^-^")
+
+if __name__ == "__main__":
+    main()
