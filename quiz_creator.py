@@ -13,6 +13,8 @@ def main():
 
 # Create the loop in able for the user to input as many quiz questions that they want.
     # Asking the user to input a quiz question and then store it.
+    while True:
+        question = input("Enter the question: ")
 
     # Make a dictionary where it stores the 4 possible answers (a, b, c, d).
         # For each letter chocies (a, b, c, d), the user will enter the answer and store it to the dictionary.
