@@ -25,6 +25,7 @@ def main():
 
     # Asking the user to input the correct answer that is found in one of the following letter choices: (a, b, c, d)
         # For consistency, the letter input should be lowercased, we will be converting them.
+        correct_answer = input("Enter the correct answer (a, b, c, or d): ").lower()
 
     # All of the questions, choices, and the correct answer shall be saved to a separate file (.txt)
         # Define a function save_to_file()
