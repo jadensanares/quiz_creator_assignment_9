@@ -53,5 +53,8 @@ def main():
 
     # Ask the user if they want to put in another question.
         # If the response is "yes" then the loop continues, if "no" then the loop breaks
-
+        another_question = input("Would you like to add another question? Type either (yes) or (no): ").lower()
+        if another_question != "yes":
+            break
+        
 # If the user wants to exit the program, put in a thank message to the user 
