@@ -18,7 +18,11 @@ def main():
 
     # Make a dictionary where it stores the 4 possible answers (a, b, c, d).
         # For each letter chocies (a, b, c, d), the user will enter the answer and store it to the dictionary.
-        
+        choices = {}
+        for choice in ['a', 'b', 'c', 'd']:
+            answer = input("Enter the answer for " + choice + ": ")
+            choices[choice] = answer
+
     # Asking the user to input the correct answer that is found in one of the following letter choices: (a, b, c, d)
         # For consistency, the letter input should be lowercased, we will be converting them.
 
