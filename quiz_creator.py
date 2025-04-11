@@ -24,13 +24,11 @@ def save_to_file(question, choices, correct_answer, filename="created_quiz_quest
 def main():
     print("Hello User, welcome to this Quiz Creator!")
 
-save_to_file(question, choices, correct_answer)
-
 # Create the loop in able for the user to input as many quiz questions that they want.
     # Asking the user to input a quiz question and then store it.
     while True:
         question = input("Enter the question: ")
-
+ 
     # Make a dictionary where it stores the 4 possible answers (a, b, c, d).
         # For each letter chocies (a, b, c, d), the user will enter the answer and store it to the dictionary.
         choices = {}
@@ -41,6 +39,8 @@ save_to_file(question, choices, correct_answer)
     # Asking the user to input the correct answer that is found in one of the following letter choices: (a, b, c, d)
         # For consistency, the letter input should be lowercased, we will be converting them.
         correct_answer = input("Enter the correct answer (a, b, c, or d): ").lower()
+
+        save_to_file(question, choices, correct_answer)
 
     # Make a visual display feedback for the questions entered (for more convenience visually in letting the user know what answer options are correct or not)
         # Make a loop for each answer option
