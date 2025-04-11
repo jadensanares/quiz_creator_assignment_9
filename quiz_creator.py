@@ -40,7 +40,8 @@ def main():
         # For consistency, the letter input should be lowercased, we will be converting them.
         correct_answer = input("Enter the correct answer (a, b, c, or d): ").lower()
 
-        save_to_file(question, choices, correct_answer)
+    
+        save_to_file(question, choices, correct_answer) # to run seperate txt file function inside the main() 
 
     # Make a visual display feedback for the questions entered (for more convenience visually in letting the user know what answer options are correct or not)
         # Make a loop for each answer option
