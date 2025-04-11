@@ -24,6 +24,8 @@ def save_to_file(question, choices, correct_answer, filename="created_quiz_quest
 def main():
     print("Hello User, welcome to this Quiz Creator!")
 
+save_to_file(question, choices, correct_answer)
+
 # Create the loop in able for the user to input as many quiz questions that they want.
     # Asking the user to input a quiz question and then store it.
     while True:
