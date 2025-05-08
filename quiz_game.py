@@ -9,7 +9,9 @@
 print("🧐 Welcome to this short Math Quiz Game! Let's test your problem solving skills!")
 
 # ASK the user to inpute filename of quiz (its default is set to "created_quiz_questions.txt")
-
+filename = input("Enter the filename of the quiz (press Enter to user 'created_quiz_questions.txt'): ")
+if filename.strip() == "":
+    filename = "created_quiz_questions.txt"
 
 # CALL function to load up the questions form the created text file
 #      OPEN file in read mode
