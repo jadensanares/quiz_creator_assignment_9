@@ -5,9 +5,8 @@
 
 # INITIALIZE the QUIZ Game
 
-
 # DISPLAY the welcome message to the players
-
+print("🧐 Welcome to this short Math Quiz Game! Let's test your problem solving skills!")
 
 # ASK the user to inpute filename of quiz (its default is set to "created_quiz_questions.txt")
 
