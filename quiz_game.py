@@ -26,3 +26,23 @@
 #   DISPLAY an error message
 #   END program
 
+# SHUFFLE the list of questions (so that the user will answer the questions in a randomized way)
+
+# SET score to 0
+# SET total to number of questions
+
+# FOR each questions in the list
+#       DISPLAY questions and choices (a to d)  
+#       ASK user for their answer (a, b, c, or d)
+#       IF user's answer is equal to the correct answer
+#           DISPLAY "Correct Answer!" message text
+#           INCREMENT score 
+#       ELSE    
+#           DISPLAY "Incorrect Answer." message text
+
+# after all of the questions were displayed
+#       DISPLAY final score out of how many questions were provided
+
+# DISPLPAY a thank you message in the end
+
+# END the Quiz Game
