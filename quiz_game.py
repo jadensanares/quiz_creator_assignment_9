@@ -46,7 +46,7 @@ def load_questions_from_file(filename):
             questions.append({"question": question, "choices": choices, "answer": correct_answer})
             i += 7
     except FileNotFoundError:
-        print(" ⚠️CAUTION⚠️ Cannot locate the file. Please type in an existing filename and check if it is correct.")
+        print(" ⚠️ CAUTION⚠️ Cannot locate the file. Please type in an existing filename and check if it is correct.")
         return []
     return questions
 
@@ -89,15 +89,14 @@ for item in quiz_data:
         score += 1
     else:
         correct_letter = item["answer"]
-        correct_text = item["chocies"][correct_letter]
+        correct_text = item["choices"][correct_letter]
         print(f"🟥 The Answer is Incorrect. The correct answer was {correct_letter}: {correct_text}\n")
-        
-   
-
 
 # after all of the questions were displayed
 #       DISPLAY final score out of how many questions were provided
+print(f"You've completed the Quiz! You scored: {score} out of {total}")
 
 # DISPLPAY a thank you message in the end
+print("Thank you for playing this short Math Quiz Game! 🙋‍♂️")
 
 # END the Quiz Game
