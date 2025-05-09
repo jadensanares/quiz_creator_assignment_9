@@ -51,10 +51,14 @@ def load_questions_from_file(filename):
         return []
     return questions
 
-
 # IF no questions were found
 #   DISPLAY an error message
 #   END program
+
+quiz_data = load_questions_from_file(filename)
+if not quiz_date:
+    print("No questions were found. Exiting the quiz game.")
+    exit()
 
 # SHUFFLE the list of questions (so that the user will answer the questions in a randomized way)
 
