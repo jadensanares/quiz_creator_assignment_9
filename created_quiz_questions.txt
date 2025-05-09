@@ -47,7 +47,7 @@ c: 12
 d: 13
 Correct Answer: c
 
-Solve 24 � 8 + 2
+Solve 24 / 8 + 2
 a: 5
 b: 6
 c: 7
