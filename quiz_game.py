@@ -22,7 +22,6 @@ if filename.strip() == "":
 #             Question, Choices (a, b , c, d), Correct Answer
 #           ADD each question set to the list
 #      RETURN list of break downed txt questions
-
 import random
 
 def load_questions_from_file(filename):
@@ -54,7 +53,6 @@ def load_questions_from_file(filename):
 # IF no questions were found
 #   DISPLAY an error message
 #   END program
-
 quiz_data = load_questions_from_file(filename)
 if not quiz_data:
     print("No questions were found. Exiting the quiz game.")
@@ -65,6 +63,8 @@ random.shuffle(quiz_data)
 
 # SET score to 0
 # SET total to number of questions
+score = 0
+total = len(quiz_data)
 
 # FOR each questions in the list
 #       DISPLAY questions and choices (a to d)  
