@@ -12,7 +12,10 @@ init(autoreset=True) # So that it auto resets the color after each print
 # INITIALIZE the QUIZ Game
 
 # DISPLAY the welcome message to the players
-print("🧐 Welcome to this short Math Quiz Game! Let's test your problem solving skills!")
+print(Fore.CYAN + "🧐 Welcome to this short Math Quiz Game! Let's test your problem solving skills!")
+time.sleep(1)
+print(Fore.CYAN + "Let's test your math solving skills!\n")
+time.sleep(1)
 
 # ASK the user to inpute filename of quiz (its default is set to "created_quiz_questions.txt")
 filename = input("Enter the filename of the quiz (press Enter to user 'created_quiz_questions.txt'): ")
