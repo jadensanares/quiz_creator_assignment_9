@@ -83,7 +83,7 @@ total = len(quiz_data)
 #       ELSE    
 #           DISPLAY "Incorrect Answer." message text
 for item in quiz_data:
-    print("\n" + Fore.BLUE "📃 " + item["question"])
+    print("\n" + Fore.BLUE + "📃 " + item["question"])
     for key in sorted(item["choices"].keys()):
         print(f" {key}: {item['choices'][key]}")
     while True:
