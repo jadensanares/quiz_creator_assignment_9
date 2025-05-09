@@ -87,7 +87,7 @@ for item in quiz_data:
     for key in sorted(item["choices"].keys()):
         print(f" {key}: {item['choices'][key]}")
     while True:
-        user_answer = input("Your anver (a, b, c, or d): ").lower()
+        user_answer = input("Your answer (a, b, c, or d): ").lower()
         if user_answer in ['a', 'b', 'c', 'd']:
             break
         else:
@@ -104,7 +104,7 @@ for item in quiz_data:
 #       DISPLAY final score out of how many questions were provided
 print(Fore.MAGENTA + f"You've completed the Quiz! You scored: {score} out of {total}")
 
-# DISPLPAY a thank you message in the end
+# DISPLAY a thank you message in the end
 print(Fore.MAGENTA +"Thank you for playing this short Math Quiz Game! 🙋‍♂️")
 
 # END the Quiz Game
