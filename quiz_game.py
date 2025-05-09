@@ -16,12 +16,41 @@ if filename.strip() == "":
 # CALL function to load up the questions form the created text file
 #      OPEN file in read mode
 #      READ all lines
-#      INITIALIZE an empoty list to store each question set
+#      INITIALIZE an empty list to store each question set
 #      FOR each line group (question + choices + correct answer)
 #           break down the text and extract:
 #             Question, Choices (a, b , c, d), Correct Answer
 #           ADD each question set to the list
 #      RETURN list of break downed txt questions
+
+import random
+
+def load_questions_from_file(filename):
+    questions = []
+    try:
+        with open(filename, "r") as file:
+            lines = file.readlines()
+
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+            if line == "":
+                i += 1
+                continue
+            question = line
+            choices = {}
+            for choice_number in range (1, 5):
+                key, value = lines[i + choice_number].strip().split(": ")
+                choices[key] = value
+            correct_answer_line = lines[i + 5].strip()
+            correct_answer = correct_answer_line.split(": ")[1]
+            questions.append({"question": question, "choices": choices, "answer": correct_answer})
+            i += 7
+    except FileNotFoundError:
+        print(" ⚠️CAUTION⚠️ Cannot locate the file. Please type in an existing filename and check if it is correct.")
+        return []
+    return questions
+
 
 # IF no questions were found
 #   DISPLAY an error message
