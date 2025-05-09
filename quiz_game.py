@@ -54,7 +54,7 @@ def load_questions_from_file(filename):
             questions.append({"question": question, "choices": choices, "answer": correct_answer})
             i += 7
     except FileNotFoundError:
-        print(" ⚠️ CAUTION⚠️ Cannot locate the file. Please type in an existing filename and check if it is correct.")
+        print(Fore.RED + " ⚠️ CAUTION⚠️ Cannot locate the file. Please type in an existing filename and check if it is correct.")
         return []
     return questions
 
@@ -63,7 +63,7 @@ def load_questions_from_file(filename):
 #   END program
 quiz_data = load_questions_from_file(filename)
 if not quiz_data:
-    print("No questions were found. Exiting the quiz game.")
+    print(Fore.RED +"No questions were found. Exiting the quiz game.")
     exit()
 
 # SHUFFLE the list of questions (so that the user will answer the questions in a randomized way)
@@ -83,7 +83,7 @@ total = len(quiz_data)
 #       ELSE    
 #           DISPLAY "Incorrect Answer." message text
 for item in quiz_data:
-    print("\n📃 " + item["question"])
+    print("\n" + Fore.BLUE "📃 " + item["question"])
     for key in sorted(item["choices"].keys()):
         print(f" {key}: {item['choices'][key]}")
     while True:
@@ -91,20 +91,20 @@ for item in quiz_data:
         if user_answer in ['a', 'b', 'c', 'd']:
             break
         else:
-            print("Invalid input. Enter only a, b, c, or d.")
+            print(Fore.YELLOW + "Invalid input. Enter only a, b, c, or d.")
     if user_answer == item["answer"]:
-        print("🟩 Your Answer is Correct!\n")
+        print(Fore.GREEN + "🟩 Your Answer is Correct!\n")
         score += 1
     else:
         correct_letter = item["answer"]
         correct_text = item["choices"][correct_letter]
-        print(f"🟥 The Answer is Incorrect. The correct answer was {correct_letter}: {correct_text}\n")
+        print(Fore.RED + f"🟥 The Answer is Incorrect. The correct answer was {correct_letter}: {correct_text}\n")
 
 # after all of the questions were displayed
 #       DISPLAY final score out of how many questions were provided
-print(f"You've completed the Quiz! You scored: {score} out of {total}")
+print(Fore.MAGENTA + f"You've completed the Quiz! You scored: {score} out of {total}")
 
 # DISPLPAY a thank you message in the end
-print("Thank you for playing this short Math Quiz Game! 🙋‍♂️")
+print(Fore.MAGENTA +"Thank you for playing this short Math Quiz Game! 🙋‍♂️")
 
 # END the Quiz Game
