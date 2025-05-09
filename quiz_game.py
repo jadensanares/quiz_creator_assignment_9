@@ -56,7 +56,7 @@ def load_questions_from_file(filename):
 #   END program
 
 quiz_data = load_questions_from_file(filename)
-if not quiz_date:
+if not quiz_data:
     print("No questions were found. Exiting the quiz game.")
     exit()
 
