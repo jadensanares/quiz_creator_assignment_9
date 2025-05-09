@@ -3,8 +3,11 @@
 # The user will answer the randomly selected question and check if the answer is correct
 # ////=======================================================================================///
 
-# Adding a simple creative upgrade: colorec text and timed messages
-
+# Adding a simple creative upgrade: colored text and timed messages
+import random
+import time
+from colorama import Fore, Style, init
+init(autoreset=True) # So that it auto resets the color after each print
 
 # INITIALIZE the QUIZ Game
 
@@ -25,7 +28,6 @@ if filename.strip() == "":
 #             Question, Choices (a, b , c, d), Correct Answer
 #           ADD each question set to the list
 #      RETURN list of break downed txt questions
-import random
 
 def load_questions_from_file(filename):
     questions = []
