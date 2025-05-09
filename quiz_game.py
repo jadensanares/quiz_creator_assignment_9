@@ -3,6 +3,9 @@
 # The user will answer the randomly selected question and check if the answer is correct
 # ////=======================================================================================///
 
+# Adding a simple creative upgrade: colorec text and timed messages
+
+
 # INITIALIZE the QUIZ Game
 
 # DISPLAY the welcome message to the players
