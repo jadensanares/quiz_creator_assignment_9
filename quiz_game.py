@@ -74,6 +74,26 @@ total = len(quiz_data)
 #           INCREMENT score 
 #       ELSE    
 #           DISPLAY "Incorrect Answer." message text
+for item in quiz_data:
+    print("\n📃 " + item["question"])
+    for key in sorted(item["choices"].keys()):
+        print(f" {key}: {item['choices'][key]}")
+    while True:
+        user_answer = input("Your anver (a, b, c, or d): ").lower()
+        if user_answer in ['a', 'b', 'c', 'd']:
+            break
+        else:
+            print("Invalid input. Enter only a, b, c, or d.")
+    if user_answer == item["answer"]:
+        print("🟩 Your Answer is Correct!\n")
+        score += 1
+    else:
+        correct_letter = item["answer"]
+        correct_text = item["chocies"][correct_letter]
+        print(f"🟥 The Answer is Incorrect. The correct answer was {correct_letter}: {correct_text}\n")
+        
+   
+
 
 # after all of the questions were displayed
 #       DISPLAY final score out of how many questions were provided
