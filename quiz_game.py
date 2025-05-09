@@ -61,6 +61,7 @@ if not quiz_data:
     exit()
 
 # SHUFFLE the list of questions (so that the user will answer the questions in a randomized way)
+random.shuffle(quiz_data)
 
 # SET score to 0
 # SET total to number of questions
