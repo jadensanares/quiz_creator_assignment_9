@@ -23,7 +23,7 @@ if filename.strip() == "":
     filename = "created_quiz_questions.txt"
 
 # CALL function to load up the questions form the created text file
-#      OPEN file in read mode
+#      OPEN file in read mode 
 #      READ all lines
 #      INITIALIZE an empty list to store each question set
 #      FOR each line group (question + choices + correct answer)
@@ -38,21 +38,21 @@ def load_questions_from_file(filename):
         with open(filename, "r") as file:
             lines = file.readlines()
 
-        i = 0
-        while i < len(lines):
-            line = lines[i].strip()
+        line_index = 0
+        while line_index < len(lines):
+            line = lines[line_index].strip()
             if line == "":
-                i += 1
+                line_index += 1
                 continue
             question = line
             choices = {}
             for choice_number in range (1, 5):
-                key, value = lines[i + choice_number].strip().split(": ")
+                key, value = lines[line_index + choice_number].strip().split(": ")
                 choices[key] = value
-            correct_answer_line = lines[i + 5].strip()
+            correct_answer_line = lines[line_index + 5].strip()
             correct_answer = correct_answer_line.split(": ")[1]
             questions.append({"question": question, "choices": choices, "answer": correct_answer})
-            i += 7
+            line_index += 7
     except FileNotFoundError:
         print(Fore.RED + " ⚠️ CAUTION⚠️ Cannot locate the file. Please type in an existing filename and check if it is correct.")
         return []
